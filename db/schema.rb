@@ -10,6 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_04_15_034900) do
 
+  create_table "acts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "num", null: false
+    t.text "choice", null: false
+    t.integer "ans", null: false
+    t.bigint "rubigon_id", null: false
+    t.index ["rubigon_id"], name: "index_acts_on_rubigon_id"
+  end
+
+  create_table "rubigons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "stage", null: false
+    t.text "enemy", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "acts", "rubigons"
 end

@@ -17,7 +17,7 @@ div {
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  color: #000000;
 }
 
 li {
@@ -29,5 +29,54 @@ img {
   vertical-align: bottom;
 }
 
+a {
+  text-decoration: none;
+  color: #0000ff;
+}
+
+/* body */
+
+.background-image {
+  background-image: url("/rubigon_images/meadow.png");
+  height: 800px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* form */
+.edit-form {
+  padding: 40px 400px;
+}
 
 
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #87CEFA;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/* enemy-list */
+.enemy-list {
+  margin-top: 20px;
+  font-weight: 900;
+  background-color: rgba( 204, 204, 204, 0.55 );
+}
+
+/* edit */
+.e-title {
+  border-bottom: 3px solid black;
+  font-size: 30px;
+}
