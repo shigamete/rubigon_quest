@@ -23,6 +23,9 @@ class RubigonsController < ApplicationController
   end
 
   def show
+    @rubigon = Rubigon.find(params[:id])
+    @act = Act.new
+    @acts = @rubigon.acts.all
   end
 
   private

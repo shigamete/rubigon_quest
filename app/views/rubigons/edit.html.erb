@@ -2,8 +2,8 @@
   <div>
     <h2>えでぃっとtoto</h2>
   </div>
+    <%= render partial: 'form_s'%>
   <div class="e-title">
-    <%= "#{@rubigon.stage}_#{@rubigon.enemy}" %>
   </div>
   <%= form_with model:[ @rubigon,@act], local: true do |f| %>
     <div>
