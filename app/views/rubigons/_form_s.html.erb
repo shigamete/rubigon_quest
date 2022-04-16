@@ -1,13 +1,13 @@
 <%= form_with model:@rubigon, local: true do |f| %>
     <div>
-    <%= f.label :stage, 'ステージ No.' %><br />
-    <%= f.text_field :stage, id:'stage' %>
+      <%= f.label :stage, 'ステージ No.' %><br />
+      <%= f.text_field :stage, id:'stage' %>
     </div>
     <div>
-    <%= f.label :enemy, '敵' %><br />
-    <%= f.text_area :enemy, id:'enemy' %>
+      <%= f.label :enemy, '敵' %><br />
+      <%= f.text_area :enemy, id:'enemy' %>
     </div>
     <div>
-    <%= f.submit '追加する',class: :form__btn %>
+      <%= f.submit '登録する',class: :form__btn %>
     </div>
   <% end %>

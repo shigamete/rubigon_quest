@@ -1,3 +1,3 @@
 class Rubigon < ApplicationRecord
-  has_many :acts
+  has_many :acts, dependent: :destroy
 end

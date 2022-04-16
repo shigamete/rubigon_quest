@@ -28,6 +28,12 @@ class RubigonsController < ApplicationController
     @acts = @rubigon.acts.all
   end
 
+  def destroy
+    @rubigon = Rubigon.find(params[:id])
+    @rubigon.destroy
+    redirect_to new_rubigon_path
+  end
+
   private
     def rubigon_params
       params.require(:rubigon).permit(:stage, :enemy)

@@ -13,7 +13,6 @@
 ActiveRecord::Schema.define(version: 2022_04_15_034900) do
 
   create_table "acts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "num", null: false
     t.text "choice", null: false
     t.integer "ans", null: false
     t.bigint "rubigon_id", null: false
@@ -21,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_04_15_034900) do
   end
 
   create_table "rubigons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "stage", null: false
+    t.integer "stage_no", null: false
     t.text "enemy", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
