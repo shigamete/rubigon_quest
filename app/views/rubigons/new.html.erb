@@ -2,13 +2,13 @@
   <div>
   <h2>管理者ページ</h2>
   </div>
-  
+
   <%= render partial:'form_s' %>
   
     <div class="enemy-list">
     <% @rubigons.each do |rubigon| %>
     <p><input type="radio" name="enemy">
-    <%= link_to"#{rubigon.stage}_#{rubigon.enemy}",edit_rubigon_path(rubigon.id) %></p>
+    <%= link_to"#{rubigon.stage_no}_#{rubigon.enemy}",edit_rubigon_path(rubigon.id) %></p>
     <% end %>
     </div>
 </div>

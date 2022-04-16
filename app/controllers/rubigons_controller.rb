@@ -36,6 +36,6 @@ class RubigonsController < ApplicationController
 
   private
     def rubigon_params
-      params.require(:rubigon).permit(:stage, :enemy)
+      params.require(:rubigon).permit(:stage_no, :enemy, :image)
     end
 end

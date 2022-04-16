@@ -11,6 +11,6 @@ class ActsController < ApplicationController
 
   private
     def act_params
-      params.require(:act).permit(:num, :choice, :ans).merge(rubigon_id: @rubigon.id)
+      params.require(:act).permit(:choice, :ans).merge(rubigon_id: @rubigon.id)
     end
 end
