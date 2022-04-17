@@ -44,8 +44,37 @@ a {
 }
 
 /* form */
+
 .edit-form {
-  padding: 40px 400px;
+  min-height: calc(100vh - 161px);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba( 204, 204, 204, 0.55 );
+  margin: 0 0 0 300px;
+  padding-top: 20px;
+}
+
+.form-a {
+  padding: 0 0 20px 200px;
+}
+
+.content-title {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-loca {
+  margin-left: 20px;
+}
+
+.form__text {
+  width: 50%;
+}
+
+.field{
+  margin: 10px 0;
 }
 
 
@@ -68,11 +97,19 @@ a {
   cursor: pointer;
 }
 
+.delete-btn {
+  margin: 10px 0 0 150px;
+}
+
+.bottom-btn {
+  display: flex;
+  justify-content: center;
+}
+
 /* enemy-list */
 .enemy-list {
-  margin-top: 20px;
-  font-weight: 900;
-  background-color: rgba( 204, 204, 204, 0.55 );
+  margin: 0 auto;
+  font-weight: 900
 }
 
 /* edit */

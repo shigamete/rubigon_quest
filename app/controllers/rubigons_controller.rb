@@ -34,6 +34,10 @@ class RubigonsController < ApplicationController
     redirect_to new_rubigon_path
   end
 
+  def update
+    @rubigon = Rubigon.find(params[:id])
+    
+
   private
     def rubigon_params
       params.require(:rubigon).permit(:stage_no, :enemy, :image)

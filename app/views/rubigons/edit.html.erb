@@ -1,26 +1,19 @@
 <div class="edit-form">
-  <div>
-    <h2>えでぃっとtoto</h2>
-  </div>
-  
-    <%= render partial: 'form_s'%>
-    <div class="delete-btn">
+  <div class="content-title">
+    <div>
+    <h2>えでぃっと</h2>
+    </div>
+    <div class="btn-loca">
     <%= link_to "削除する", rubigon_path(@rubigon.id), method: :DELETE, class: :form__btn %>
     </div>
-
-  <div class="e-title">
   </div>
-  <%= form_with model:[ @rubigon,@act], local: true do |f| %>
-    <div>
-      <%= f.label :choice, 'アクション' %><br />
-      <%= f.text_area :choice, id:'act' %>
-    </div>
-    <div>
-      <%= f.label :ans, '戻り値' %><br />
-      <%= f.text_field :ans, id:'ans' %>
-    </div>
-    <div>
-      <%= f.submit '登録する',class: :form__btn %>
-    </div>
-  <% end %>
+  
+  <%= render partial: 'form_s' %>
+  
+  <%= render partial:'form_a' %>
+
+  <div class="bottom-btn">
+  <<<%= link_to '前ページへ戻る', new_rubigon_path %>>>  /  <<
+  <%= link_to 'TOPへ戻る', root_path %>>>
+  </div>
 </div>
