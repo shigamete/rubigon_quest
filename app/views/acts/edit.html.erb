@@ -1,3 +1,19 @@
-<h2>へんすー</h2>
+<div class="frame-e">
+  <div class="edit-form">
+    <div class="content-title">
+      <div>
+        <h2>管理者ページ（3/3）</h2>
+      </div>
+      <div class="delete-btn">
+      <%= link_to "削除する", rubigon_act_path(rubigon_id: @rubigon.id, id: @act.id), method: :DELETE, class: :form__btn %>
+      </div>
+    </div>
 
-<%= render partial: 'form_a' %>
+    <%= render partial: 'form_a' %>
+
+    <div class="bottom-btn">
+      <<<%= link_to '前ページへ戻る', edit_rubigon_path(@rubigon.id) %>>>  /  <<
+      <%= link_to 'TOPへ戻る', root_path %>>>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,13 @@ class ActsController < ApplicationController
       render :edit
     end
   end
-    
+
+  def destroy
+    @rubigon = Rubigon.find(params[:rubigon_id])
+    @act = Act.find(params[:id])
+    @act.destroy
+    redirect_to edit_rubigon_path(@rubigon.id)
+  end
 
   private
     def act_params
