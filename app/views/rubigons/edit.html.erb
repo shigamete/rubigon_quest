@@ -3,15 +3,20 @@
     <div>
     <h2>えでぃっと</h2>
     </div>
-    <div class="btn-loca">
+    <div class="delete-btn">
     <%= link_to "削除する", rubigon_path(@rubigon.id), method: :DELETE, class: :form__btn %>
     </div>
   </div>
   
-  <%= render partial: 'form_s' %>
+  <%= render partial: 'acts/form_s' %>
   
-  <%= render partial:'form_a' %>
+  <%= render partial:'acts/form_a' %>
 
+  <div class="act-list">
+    <% @acts.each do |act| %>
+    <%= link_to"#{act.choice}",edit_rubigon_act_path(rubigon_id: @rubigon.id, id: act.id) %>
+    <% end %>
+  </div>
   <div class="bottom-btn">
   <<<%= link_to '前ページへ戻る', new_rubigon_path %>>>  /  <<
   <%= link_to 'TOPへ戻る', root_path %>>>

@@ -6,6 +6,7 @@ class RubigonsController < ApplicationController
   def new
     @rubigon = Rubigon.new
     @rubigons = Rubigon.all
+    @act = Act.new
   end
 
   def create
@@ -20,6 +21,7 @@ class RubigonsController < ApplicationController
   def edit
     @rubigon = Rubigon.find(params[:id])
     @act = Act.new
+    @acts = @rubigon.acts.all
   end
 
   def show
@@ -36,7 +38,13 @@ class RubigonsController < ApplicationController
 
   def update
     @rubigon = Rubigon.find(params[:id])
-    
+    if @rubigon.update(act_params)
+      redirect_to new_rubigon_path
+    else
+      render :edit
+    end
+  end
+
 
   private
     def rubigon_params
