@@ -4,6 +4,7 @@ class RubigonsController < ApplicationController
   end
 
   def new
+    basic_auth
     @rubigon = Rubigon.new
     @rubigons = Rubigon.all
     @act = Act.new
@@ -38,7 +39,7 @@ class RubigonsController < ApplicationController
 
   def update
     @rubigon = Rubigon.find(params[:id])
-    if @rubigon.update(act_params)
+    if @rubigon.update(rubigon_params)
       redirect_to new_rubigon_path
     else
       render :edit
@@ -47,6 +48,12 @@ class RubigonsController < ApplicationController
 
 
   private
+    def basic_auth
+      authenticate_or_request_with_http_basic do |username, password|
+        username == 'admin' && password == '2222'
+      end
+    end
+    
     def rubigon_params
       params.require(:rubigon).permit(:stage_no, :enemy, :image)
     end
