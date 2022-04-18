@@ -38,9 +38,25 @@ a {
 
 .background-image {
   background-image: url("/rubigon_images/meadow.png");
-  height: 800px;
+  height: 600px;
   background-size: cover;
   background-attachment: fixed;
+}
+
+/* TOP */
+.top-frame {
+  height: 100%;
+  width: 100%;
+}
+
+.start-btn{
+  height:45%;
+}
+
+.admin {
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
 }
 
 /* form */
@@ -56,17 +72,13 @@ a {
   padding-top: 20px;
 }
 
-.form-a {
+.form-frame {
   padding: 0 0 20px 200px;
 }
 
 .content-title {
   display: flex;
   justify-content: center;
-}
-
-.btn-loca {
-  margin-left: 20px;
 }
 
 .form__text {
@@ -97,23 +109,32 @@ a {
   cursor: pointer;
 }
 
-.delete-btn {
-  margin: 10px 0 0 150px;
-}
-
 .bottom-btn {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 /* enemy-list */
 .enemy-list {
-  margin: 0 auto;
-  font-weight: 900
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.enemy {
+  width: 200px;
+  margin: 4px 48px;
+  border: 1px dashed black;
 }
 
 /* edit */
-.e-title {
-  border-bottom: 3px solid black;
-  font-size: 30px;
+.delete-btn {
+  margin-left: 20px;
+}
+
+.error {
+  margin: 0 auto;
+  color: red;
+  padding: 10px;
 }
