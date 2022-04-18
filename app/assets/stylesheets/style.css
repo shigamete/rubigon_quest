@@ -38,17 +38,47 @@ a {
 
 .background-image {
   background-image: url("/rubigon_images/meadow.png");
-  height: 100vh;
+  height: 94vh;
   background-size: cover;
   background-attachment: fixed;
 }
 
 /* TOP */
+
 .frame {
   height: 100%;
   width: 100%;
 }
 
+.logo {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo-image {
+  border-radius: 10%;
+}
+
+.start-btn {
+  width: 200px;
+  font-size: 28px;
+  position: absolute;
+  bottom: 30px;
+  border-bottom : 2px solid #0000ff;
+}
+
+.admin {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 500px;
+  right: 10px;
+}
+
+/* form */
 .frame-e {
   height: 100%;
   width: 100%;
@@ -56,18 +86,6 @@ a {
   justify-content: center;
   align-items: center;
 }
-
-.start-btn{
-  height:45%;
-}
-
-.admin {
-  height: 45%;
-  display: flex;
-  align-items: flex-end;
-}
-
-/* form */
 
 .edit-form {
   height: calc(100vh - 40px);
@@ -148,4 +166,15 @@ a {
   margin: 0 auto;
   color: red;
   padding: 10px;
+}
+
+/* フッター */
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
 }
