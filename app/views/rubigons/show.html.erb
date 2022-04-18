@@ -1,7 +1,9 @@
+<div class="frame">
 
-<h2><%= "#{@rubigon.enemy} が出現！!" %></h2>
-<%= image_tag @rubigon.image %>
+  <h2><%= "#{@rubigon.enemy} が出現！!" %></h2>
+  <%= image_tag @rubigon.image %>
 
-<% @acts.each do |act| %>
-<%= link_to "#{act.choice}を選択",rubigon_path(id: act.ans) %>
-<% end %>
+  <% @acts.each do |act| %>
+  <%= link_to "#{act.choice}を選択",rubigon_path(id: act.ans) %>
+  <% end %>
+</div>

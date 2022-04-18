@@ -1,24 +1,26 @@
-<div class="edit-form">
-  <div class="content-title">
-    <div>
-    <h2>えでぃっと</h2>
+<div class="frame-e">
+  <div class="edit-form">
+    <div class="content-title">
+      <div>
+      <h2>管理者ページ（2/3）</h2>
+      </div>
+      <div class="delete-btn">
+      <%= link_to "削除する", rubigon_path(@rubigon.id), method: :DELETE, class: :form__btn %>
+      </div>
     </div>
-    <div class="delete-btn">
-    <%= link_to "削除する", rubigon_path(@rubigon.id), method: :DELETE, class: :form__btn %>
-    </div>
-  </div>
-  
-  <%= render partial: 'acts/form_s' %>
-  
-  <%= render partial:'acts/form_a' %>
+    
+    <%= render partial: 'acts/form_s' %>
+    
+    <%= render partial:'acts/form_a' %>
 
-  <div class="act-list">
-    <% @acts.each do |act| %>
-    <%= link_to"#{act.choice}",edit_rubigon_act_path(rubigon_id: @rubigon.id, id: act.id) %>
-    <% end %>
-  </div>
-  <div class="bottom-btn">
-  <<<%= link_to '前ページへ戻る', new_rubigon_path %>>>  /  <<
-  <%= link_to 'TOPへ戻る', root_path %>>>
+    <div class="act-list">
+      <% @acts.each do |act| %>
+      <%= link_to"#{act.choice}",edit_rubigon_act_path(rubigon_id: @rubigon.id, id: act.id) %>
+      <% end %>
+    </div>
+    <div class="bottom-btn">
+    <<<%= link_to '前ページへ戻る', new_rubigon_path %>>>  /  <<
+    <%= link_to 'TOPへ戻る', root_path %>>>
+    </div>
   </div>
 </div>
