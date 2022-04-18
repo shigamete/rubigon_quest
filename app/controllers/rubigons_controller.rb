@@ -46,15 +46,13 @@ class RubigonsController < ApplicationController
     end
   end
 
-
   private
-    def basic_auth
-      authenticate_or_request_with_http_basic do |username, password|
-        username == 'admin' && password == '2222'
-      end
+  def basic_auth
+    authenticate_or_request_with_http_basic do |username, password|
+    username == ENV['BASIC_AUTH_USER'] && password == ENV['BASIC_AUTH_PASSWORD']
     end
-    
-    def rubigon_params
-      params.require(:rubigon).permit(:stage_no, :enemy, :image)
-    end
+  end
+  def rubigon_params
+    params.require(:rubigon).permit(:stage_no, :enemy, :image)
+  end
 end
