@@ -8,16 +8,19 @@
       <%= link_to "削除する", rubigon_path(@rubigon.id), method: :DELETE, class: :form__btn %>
       </div>
     </div>
-    
-    <%= render partial: 'acts/form_s' %>
-    
-    <%= render partial:'acts/form_a' %>
-
-    <div class="act-list">
-      <% @acts.each do |act| %>
-      <%= link_to"#{act.choice}",edit_rubigon_act_path(rubigon_id: @rubigon.id, id: act.id) %>
-      <% end %>
+    <div class="form-set">
+      <div class="s-frame">
+        <%= render partial: 'acts/form_s' %>
+      </div>
+      <div class="a-frame">
+        <%= render partial:'acts/form_a' %>
+      </div>
     </div>
+      <% @acts.each do |act| %>
+      <div class="act-list">
+      <%= link_to"#{act.choice}_#{act.ans}",edit_rubigon_act_path(rubigon_id: @rubigon.id, id: act.id) %>
+      </div>
+      <% end %>
     <div class="bottom-btn">
     <<<%= link_to '前ページへ戻る', new_rubigon_path %>>>  /  <<
     <%= link_to 'TOPへ戻る', root_path %>>>
