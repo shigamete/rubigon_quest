@@ -51,7 +51,7 @@ a {
 }
 
 .logo {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +59,7 @@ a {
 }
 
 .logo-image {
+  border: 10px ridge #480000;
   border-radius: 10%;
 }
 
@@ -67,7 +68,16 @@ a {
   font-size: 28px;
   position: absolute;
   bottom: 30px;
-  border-bottom : 2px solid #0000ff;
+  border-radius: 6px;
+  transition: .3s;
+}
+
+.start-btn:hover {
+  background-color: rgb(0, 100, 80);
+}
+
+.start-btn a {
+  color: white;
 }
 
 .admin {
@@ -234,12 +244,15 @@ a {
 
 .top-link {
   position: absolute;
-  height: 100px;
-  width: 100px;
   left: 40px;
   top: 20px;
 }
 
+.title-image {
+  width: 200px;
+  border: 8px ridge #800000;
+  border-radius: 10px;
+}
 
 .choice-frame {
   width: 95%;
