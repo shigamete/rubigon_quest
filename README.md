@@ -1,24 +1,27 @@
-# README
+## アプリケーション名
+Rubigon QUEST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+次々と現れるエラー画面に対し、正しい選択肢を選んでゴールを目指すロールプレイングゲームです。  
+Ruby on Railsを用いてアプリケーションを制作した時の実際のエラー画面を使って、対処法の一例を復習できます。  
 
-Things you may want to cover:
+## URL
+https://rubigon-quest.herokuapp.com/  
 
-* Ruby version
+## （出題用）管理者ページ遷移アカウント
+- Basic認証ID: admin  
+- Basic認証パスワード: 0000  
 
-* System dependencies
+## 利用方法
+「冒険をはじめる」のリンクをクリックするとゲーム開始です。  
+各エラーに対して、画面下の選択肢から正しいものを選んでください。  
+画面右上に進捗メーターがあり、右端のお城までメーターを進めることができればゲームクリアです。  
 
-* Configuration
+## アプリケーションを作成した背景  
+アプリケーション制作時のエラーを対処しているときの情景が、  
+「まるでエラーと闘っているようだ」と思えたため、  
+この闘いの記録をリメイクすることで、楽しく復習に活かせないかと考え、制作しました。  
 
-* Database creation
+## 洗い出した要件  
+https://rubigon-quest.herokuapp.com/  
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
